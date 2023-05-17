@@ -1,0 +1,21 @@
+fusedLocationProviderClient.getLastLocation().addOnSuccessListener( activity: this, new OnSuccessListener<location>() {	
+^Override	
+public void onSuccess(Location location) {	
+// do something with the location variable }	
+
+// create a new instance of the class.
+LocationRequest locationRequest = new LocationRequest();
+// update the app every 30 secs by default
+locationRequest.setInterval(30000);
+// get a location update every 5 seconds when using GPS setting
+locationRequest.setFastestInterval(5000);
+// use GPS to get location - requires more battery power
+locationRequest.setPrioritv(LocationRequest. PRIORITY_HIGH_ACCURACY);
+
+// use WFI and towers most of the time.
+locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+
+// the latest known phone location - good enough for some apps another app on the phone is using GPS, this will be very accurate.
+LocationRequest.setPriority(LocationRequest. PRIORITY_NO_POWER);
+//Start the fused provider using locationRequest as one of the parameters
+LocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, null);

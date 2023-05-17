@@ -1,0 +1,12 @@
+<resources>
+    // use this so that language change will be easier
+    <string name="app_name">GPSTrackingVDZ</string>
+    <string name="Lat">Latitude</string>
+    <string name="Adrs">Not tracking country name</string>
+    <string name="Acu">Accuracy</string>
+    <string name="VZD_title">VDZ-BHardjono-5May23</string>
+    <string name="VDZ_number">-</string>
+    <string name="default_tv_address">Unable to get your address!</string>
+    <string name="no_location">NOT tracking (NO GPS is used)</string>
+
+</resources>
